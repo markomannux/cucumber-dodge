@@ -42,6 +42,24 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
     this.keys = scene.input.keyboard.createCursorKeys();
 
+    var leftZone = scene.add.zone(0, 0, 200, 600).setOrigin(0).setName('Left').setInteractive();
+    var rightZone = scene.add.zone(200, 0, 400, 600).setOrigin(0).setName('Right').setInteractive();
+
+    const self = this;
+
+    scene.input.on('gameobjectdown', function(pointer, gameObject) {
+      if(gameObject.name === 'Left') {
+        console.log('tap left');
+        self.tapLeft = true;
+      }
+
+      if(gameObject.name === 'Right') {
+        console.log('tap right');
+        self.tapRight = true;
+      }
+      
+    })
+    
   }
 
   freeze() {
@@ -72,7 +90,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
     // Horizontal movement
     if (!this.moving
       && !this.waitLeftReleased
-      && keys.left.isDown
+      && (keys.left.isDown || this.tapLeft)
       && this.gridPosition > 0) {
 
       this.waitLeftReleased = true;
@@ -90,7 +108,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
       });
     } else if (!this.moving
       && !this.waitRightReleased
-      && keys.right.isDown
+      && (keys.right.isDown || this.tapRight)
       && this.gridPosition < 3) {
 
       this.waitRightReleased = true;
@@ -121,6 +139,9 @@ export default class Player extends Phaser.GameObjects.Sprite {
     } else {
       this.anims.stop();
     }
+
+    this.tapLeft = false;
+    this.tapRight = false;
 
   }
 }
