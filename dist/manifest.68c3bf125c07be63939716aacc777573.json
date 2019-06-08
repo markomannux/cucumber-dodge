@@ -1,0 +1,44 @@
+{
+  "icons": [
+    {
+      "src": "assets/icons/icon_512x512.edb584b00cee5a8f0d30bc677c8c9ed2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_384x384.c37f18d848a09dd9f4af823502b81875.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_256x256.465057123cda5df490d48e21a4d7675d.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_192x192.7c0102cdbc0ce6e28f8aee21a34d8bb7.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_128x128.3929559c095215f0a76d16b7c172855d.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_96x96.c10f5a035a0acf967e4338ad899dc3dc.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Cucumber Dodge",
+  "short_name": "Cucumber Dodge",
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "start_url": "/cucumber-dodge/",
+  "description": "This is Cucumber Dodge!",
+  "background_color": "#01579b",
+  "theme_color": "#01579b",
+  "theme-color": "#01579b",
+  "prefer_related_applications": false
+}

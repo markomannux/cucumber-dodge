@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Cucumber Dodge!</title>
+  <meta name="theme-color" content="#01579b" /><link rel="manifest" href="manifest.68c3bf125c07be63939716aacc777573.json" /></head>
+  <body>
+      <div id="main-container">
+        <div id="game-container"></div>
+      </div>
+  <script type="text/javascript" src="main.js"></script></body>
+  <script>
+  if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/cucumber-dodge/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+</html>
